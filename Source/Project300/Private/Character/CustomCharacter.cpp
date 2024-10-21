@@ -2,6 +2,7 @@
 
 
 #include "Character/CustomCharacter.h"
+#include "Kismet/KismetMathLibrary.h"
 
 // Sets default values
 ACustomCharacter::ACustomCharacter()
@@ -48,6 +49,13 @@ void ACustomCharacter::ToggleLockOn()
 void ACustomCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+	if (isLockedOn)
+	{
+		FRotator lookAtRotation = UKismetMathLibrary::FindLookAtRotation(GetActorLocation(), lockedOnActor->GetActorLocation());
+		lookAtRotation.Pitch -= targetHeightOffset;
+		GetController()->SetControlRotation(lookAtRotation);
+	}
 
 }
 
