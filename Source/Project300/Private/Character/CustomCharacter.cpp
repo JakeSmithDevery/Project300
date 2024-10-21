@@ -45,6 +45,22 @@ void ACustomCharacter::ToggleLockOn()
 	}
 }
 
+void ACustomCharacter::ChangeLockOnTarget()
+{
+	if (lockOnCandidates.Num() == 0) return; // Early return if there are no candidates
+
+	// Find the current index of the locked on actor
+	int32 currentIndex = lockOnCandidates.IndexOfByKey(lockedOnActor);
+	if (currentIndex == INDEX_NONE) currentIndex = -1; // If not found, set to -1
+
+	// Calculate the next index
+	int32 nextIndex = (currentIndex + 1) % lockOnCandidates.Num();
+
+	// Set the next locked on actor
+	lockedOnActor = lockOnCandidates[nextIndex];
+}
+
+
 // Called every frame
 void ACustomCharacter::Tick(float DeltaTime)
 {

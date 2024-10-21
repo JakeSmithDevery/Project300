@@ -23,6 +23,9 @@ protected:
 	UFUNCTION(BlueprintCallable)
 	void ToggleLockOn();
 
+	UFUNCTION(BlueprintCallable)
+	void ChangeLockOnTarget();
+
 
 	//variables
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Lock-On")
