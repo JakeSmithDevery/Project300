@@ -22,6 +22,10 @@ void ACustomCharacter::BeginPlay()
 	
 }
 
+void ACustomCharacter::ToggleLockOn()
+{
+}
+
 // Called every frame
 void ACustomCharacter::Tick(float DeltaTime)
 {
