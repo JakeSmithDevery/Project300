@@ -27,7 +27,6 @@ public:
 	virtual void DrawHUD() override;
 
 protected:
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
-	AActor* LockOnTarget;
+	
 	
 };

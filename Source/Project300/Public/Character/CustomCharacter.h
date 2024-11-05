@@ -16,7 +16,6 @@ public:
 	ACustomCharacter();
 
 protected:
-
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
@@ -24,6 +23,13 @@ protected:
 	UFUNCTION(BlueprintCallable)
 	void ToggleLockOn();
 
+	UFUNCTION(BlueprintCallable)
+	void ChangeLockOnTarget();
+
+
+
+
+public:
 
 	//variables
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Lock-On")
@@ -36,15 +42,13 @@ protected:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Lock-On")
 	AActor* lockedOnActor;
-
-
-	
-
-public:	
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+
+
 };
+

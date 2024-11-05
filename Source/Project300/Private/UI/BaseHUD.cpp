@@ -2,30 +2,28 @@
 
 
 #include "UI/BaseHUD.h"
+#include "Character/CustomCharacter.h"
 
-void ABaseHUD::SetLockOnTarget(AActor* target)
-{
-	if (IsValid(target))
-		LockOnTarget = target;
-}
 
-void ABaseHUD::ClearLockOnTarget()
-{
-	LockOnTarget = nullptr;
-}
+
+
 
 void ABaseHUD::DrawHUD()
 {
 	Super::DrawHUD();
-
-	if (IsValid(LockOnTexture) && IsValid(LockOnTarget))
+	
+	ACustomCharacter* Player = Cast<ACustomCharacter>(GetOwningPlayerController()->GetPawn());
+	if (IsValid(LockOnTexture) && IsValid(Player))
 	{
-		float scale = 0.5f;
+		if (Player->isLockedOn)
+		{
+			float scale = 0.5f;
 
-		FVector screenPosition = Project(LockOnTarget->GetActorLocation(), true);
-		screenPosition.X -= (LockOnTexture->GetSizeX() * scale) / 2;
-		screenPosition.Y -= (LockOnTexture->GetSizeY() * scale) / 2;
+			FVector screenPosition = Project(Player->lockedOnActor->GetActorLocation(), true);
+			screenPosition.X -= (LockOnTexture->GetSizeX() * scale) / 2;
+			screenPosition.Y -= (LockOnTexture->GetSizeY() * scale) / 2;
 
-		DrawTextureSimple(LockOnTexture, screenPosition.X, screenPosition.Y, scale);
+			DrawTextureSimple(LockOnTexture, screenPosition.X, screenPosition.Y, scale);
+		}
 	}
 }
