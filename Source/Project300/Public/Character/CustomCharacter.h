@@ -1,10 +1,12 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
 #pragma once
-
+#include "Data/AbilityCollection.h"
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "CustomCharacter.generated.h"
+
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnCharacterAttackDelegate, EAbilityType, AttackType);
 
 UCLASS()
 class PROJECT300_API ACustomCharacter : public ACharacter
@@ -14,6 +16,12 @@ class PROJECT300_API ACustomCharacter : public ACharacter
 public:
 	// Sets default values for this character's properties
 	ACustomCharacter();
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	UAbilityCollection* Abilities;
+
+	UPROPERTY(BlueprintAssignable, BlueprintCallable)
+	FOnCharacterAttackDelegate OnCharacterAttack;
 
 protected:
 	// Called when the game starts or when spawned
