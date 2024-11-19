@@ -18,12 +18,6 @@ public:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
 	UTexture2D* LockOnTexture;
 
-	UFUNCTION(BlueprintCallable)
-	void SetLockOnTarget(AActor* target);
-
-	UFUNCTION(BlueprintCallable)
-	void ClearLockOnTarget();
-
 	virtual void DrawHUD() override;
 
 protected:
