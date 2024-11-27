@@ -7,7 +7,7 @@
 // Sets default values
 ACustomCharacter::ACustomCharacter()
 {
- 	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
+	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 
 	isLockedOn = false;
@@ -20,7 +20,7 @@ ACustomCharacter::ACustomCharacter()
 void ACustomCharacter::BeginPlay()
 {
 	Super::BeginPlay();
-	
+
 }
 
 void ACustomCharacter::ToggleLockOn()
@@ -68,9 +68,26 @@ void ACustomCharacter::Tick(float DeltaTime)
 
 	if (isLockedOn)
 	{
-		FRotator lookAtRotation = UKismetMathLibrary::FindLookAtRotation(GetActorLocation(), lockedOnActor->GetActorLocation());
-		lookAtRotation.Pitch -= targetHeightOffset;
-		GetController()->SetControlRotation(lookAtRotation);
+
+		// disable camera control while locked on
+		if (APlayerController* PlayerController = Cast<APlayerController>(GetController()))
+		{
+			PlayerController->SetIgnoreLookInput(true);
+		}
+		FRotator targetRotation = UKismetMathLibrary::FindLookAtRotation(GetActorLocation(), lockedOnActor->GetActorLocation());
+
+		targetRotation.Pitch -= targetHeightOffset;
+		FRotator currentRotation = GetController()->GetControlRotation();
+		FRotator smoothRotation = FMath::RInterpTo(currentRotation, targetRotation, DeltaTime, 5.0f);
+		GetController()->SetControlRotation(smoothRotation);
+	}
+	else
+	{
+		// enable camera control when not locked on
+		if (APlayerController* PlayerController = Cast<APlayerController>(GetController()))
+		{
+			PlayerController->SetIgnoreLookInput(false); // Enable camera movement input
+		}
 	}
 
 }
