@@ -6,7 +6,7 @@
 #include "GameFramework/Character.h"
 #include "CustomCharacter.generated.h"
 
-DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnCharacterAttackDelegate, EAbilityType, AttackType);
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnCharacterAttackDelegate, UAbility*, AttackType);
 
 UCLASS()
 class PROJECT300_API ACustomCharacter : public ACharacter
