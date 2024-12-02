@@ -66,20 +66,45 @@ void ACustomCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
-	if (isLockedOn)
+	if (isLockedOn && lockedOnActor)
 	{
+		FVector playerLocation = GetActorLocation();
+		FVector targetLocation = lockedOnActor->GetActorLocation();
+		FVector toTarget = (targetLocation - playerLocation).GetSafeNormal();
+		FVector velocity = GetVelocity();
+		FVector movementDirection = velocity.GetSafeNormal();
 
-		// disable camera control while locked on
-		if (APlayerController* PlayerController = Cast<APlayerController>(GetController()))
+		bool bIsMovingAway = FVector::DotProduct(movementDirection, toTarget) < 0;
+
+		if (!bIsMovingAway)
 		{
-			PlayerController->SetIgnoreLookInput(true);
-		}
-		FRotator targetRotation = UKismetMathLibrary::FindLookAtRotation(GetActorLocation(), lockedOnActor->GetActorLocation());
+			// disable camera control while locked on
+			if (APlayerController* PlayerController = Cast<APlayerController>(GetController()))
+			{
+				PlayerController->SetIgnoreLookInput(true);
+			}
 
-		targetRotation.Pitch -= targetHeightOffset;
-		FRotator currentRotation = GetController()->GetControlRotation();
-		FRotator smoothRotation = FMath::RInterpTo(currentRotation, targetRotation, DeltaTime, 5.0f);
-		GetController()->SetControlRotation(smoothRotation);
+			FRotator targetRotation = UKismetMathLibrary::FindLookAtRotation(GetActorLocation(), lockedOnActor->GetActorLocation());
+
+			targetRotation.Pitch -= targetHeightOffset;
+			FRotator currentRotation = GetController()->GetControlRotation();
+			FRotator smoothRotation = FMath::RInterpTo(currentRotation, targetRotation, DeltaTime, 5.0f);
+			GetController()->SetControlRotation(smoothRotation);
+
+			FRotator currentActorRotation = GetActorRotation();
+			FRotator smoothActorRotation = FMath::RInterpTo(currentActorRotation, FRotator(0.0f, targetRotation.Yaw, 0.0f), DeltaTime, 8.0f);
+			SetActorRotation(smoothActorRotation);
+		}
+		/**
+		else
+		{
+			// allow normal camera control when moving away
+			if (APlayerController* PlayerController = Cast<APlayerController>(GetController()))
+			{
+				PlayerController->SetIgnoreLookInput(false);
+			}
+		}
+		*/
 	}
 	else
 	{
