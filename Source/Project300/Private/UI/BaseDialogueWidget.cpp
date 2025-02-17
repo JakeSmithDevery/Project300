@@ -1,8 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
-#include "Dialogue/DialogueDTO.h"
 #include "UI/BaseDialogueWidget.h"
+#include "Dialogue/DialogueDTO.h"
+
 
 void UBaseDialogueWidget::SetDialogue(UDialogue* dialogue)
 {

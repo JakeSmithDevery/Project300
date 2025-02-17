@@ -1,8 +1,8 @@
 // Fill out your copyright notice in the Description page of Project Settings.
 
-
-#include "Dialogue/DialogueDTO.h"
 #include "UI/Controls/DialogueListItem.h"
+#include "Dialogue/DialogueDTO.h"
+
 
 void UDialogueListItem::NativeOnListItemObjectSet(UObject* ListItemObject)
 {
