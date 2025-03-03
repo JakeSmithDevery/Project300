@@ -13,6 +13,9 @@ void UButtonCondition::Initialize(UObject* WorldContext)
 {
 	Super::Initialize(WorldContext);
 	CharacterController = Cast<APlayerController>(UGameplayStatics::GetPlayerController(WorldContext, 0));
+
+	if (RequiredInputAction.GetStringLength() > 0)
+		CharacterController->InputComponent->BindAction(RequiredInputAction, IE_Pressed, this, UButtonCondition::InputActionTriggered);
 }
 
 void UButtonCondition::TickCondition(float DeltaTime)
@@ -21,4 +24,9 @@ void UButtonCondition::TickCondition(float DeltaTime)
 	{
 		CurrentPresses++;
 	}
+}
+
+void UButtonCondition::InputActionTriggered()
+{
+	CurrentPresses++;
 }
