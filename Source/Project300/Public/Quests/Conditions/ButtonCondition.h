@@ -24,11 +24,16 @@ public:
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
 	FKey RequiredKey;
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+	FName RequiredInputAction;
+
 	virtual bool IsConditionMet() override;
 
 	virtual void Initialize(UObject* WorldContext) override;
 
 	virtual void TickCondition(float DeltaTime) override;
+
+	void InputActionTriggered();
 
 private:
 	UPROPERTY()
