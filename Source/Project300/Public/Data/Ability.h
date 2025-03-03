@@ -26,7 +26,10 @@ public:
 	float Damage;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
-	UAnimSequence* Animation;
+	UAnimMontage* Montage;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+	FString MontageSection;
 
 };
 
