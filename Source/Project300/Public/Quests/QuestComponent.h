@@ -7,6 +7,7 @@
 #include "Quest.h"
 #include "QuestComponent.generated.h"
 
+DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOnQuestUpdated, UQuest*, quest );
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
 class PROJECT300_API UQuestComponent : public UActorComponent
@@ -24,6 +25,8 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Quests")
 	void StartQuest(UQuest* Quest);
 
+	UPROPERTY(BlueprintAssignable)
+	FOnQuestUpdated QuestUpdated;
 
 protected:
 	// Called when the game starts

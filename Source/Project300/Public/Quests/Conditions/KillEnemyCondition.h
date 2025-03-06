@@ -35,6 +35,7 @@ public:
 	virtual void Initialize(UObject* WorldContext) override;
 
 protected:
+	UFUNCTION()
 	void OnEnemyKilled(FString EnemyID, FString LocationID);
 
 private:
