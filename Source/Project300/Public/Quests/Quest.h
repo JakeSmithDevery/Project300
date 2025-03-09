@@ -25,6 +25,9 @@ public:
 	UPROPERTY()
 	TArray<UQuestStep*> StepInstances;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Quest")
+	UQuest* NextQuest;
+
 	virtual void Initialize(UObject* WorldContext);
 
 	UFUNCTION(BlueprintCallable, Category = "Quest")
