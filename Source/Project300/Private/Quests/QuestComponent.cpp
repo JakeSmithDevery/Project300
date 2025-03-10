@@ -22,6 +22,9 @@ void UQuestComponent::StartQuest(UQuest* Quest)
 	questInstance->Initialize(GetOwner());
 
 	ActiveQuests.Add(Quest->GetPrimaryAssetId(), questInstance);
+
+	if (QuestUpdated.IsBound())
+		QuestUpdated.Broadcast(Quest);
 }
 
 // Called when the game starts
@@ -55,6 +58,12 @@ void UQuestComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActor
 						GEngine->AddOnScreenDebugMessage(-1, 0.0f, FColor::Green, condition->Description.ToString());
 
 						condition->TickCondition(DeltaTime);
+
+						if (condition->IsConditionMet())
+						{
+							if (QuestUpdated.IsBound())
+								QuestUpdated.Broadcast(quest);
+						}
 					}
 				}
 			}
@@ -78,8 +87,19 @@ void UQuestComponent::CheckQuestProgress(UQuest* Quest)
 			if (Quest->GetCurrentStepIndex() >= Quest->Steps.Num())
 			{
 				UE_LOG(LogTemp, Log, TEXT("Quest '%s' completed!"), *Quest->QuestName.ToString());
+
+				if (QuestUpdated.IsBound())
+					QuestUpdated.Broadcast(Quest);
 			}
 		}
+	}
+
+	if (Quest->IsQuestCompleted())
+	{
+		UE_LOG(LogTemp, Log, TEXT("Quest '%s' completed!"), *Quest->QuestName.ToString());
+
+		if (Quest->NextQuest != NULL)
+			StartQuest(Quest->NextQuest);
 	}
 }
 
