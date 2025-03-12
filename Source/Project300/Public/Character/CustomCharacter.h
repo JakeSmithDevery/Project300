@@ -34,8 +34,11 @@ protected:
 	UFUNCTION(BlueprintCallable)
 	void ChangeLockOnTarget();
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+	float InteractionDistance;
 
-
+	UFUNCTION(BlueprintCallable)
+	virtual void TryToInteract(FVector start, FVector direction);
 
 public:
 
