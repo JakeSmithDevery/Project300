@@ -99,7 +99,10 @@ void UQuestComponent::CheckQuestProgress(UQuest* Quest)
 		UE_LOG(LogTemp, Log, TEXT("Quest '%s' completed!"), *Quest->QuestName.ToString());
 
 		if (Quest->NextQuest != NULL)
+		{
+			ActiveQuests.Remove(Quest->GetPrimaryAssetId());
 			StartQuest(Quest->NextQuest);
+		}
 	}
 }
 
