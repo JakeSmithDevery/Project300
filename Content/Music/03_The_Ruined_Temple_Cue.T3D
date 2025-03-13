@@ -1,0 +1,39 @@
+Begin Object Class=/Script/Engine.SoundCue Name="03_The_Ruined_Temple_Cue" ExportPath="/Script/Engine.SoundCue'/Game/Music/03_The_Ruined_Temple_Cue.03_The_Ruined_Temple_Cue'"
+   Begin Object Class=/Script/AudioEditor.SoundCueGraph Name="SoundCueGraph_0" ExportPath="/Script/AudioEditor.SoundCueGraph'/Game/Music/03_The_Ruined_Temple_Cue.03_The_Ruined_Temple_Cue:SoundCueGraph_0'"
+      Begin Object Class=/Script/AudioEditor.SoundCueGraphNode Name="SoundCueGraphNode_0" ExportPath="/Script/AudioEditor.SoundCueGraphNode'/Game/Music/03_The_Ruined_Temple_Cue.03_The_Ruined_Temple_Cue:SoundCueGraph_0.SoundCueGraphNode_0'"
+      End Object
+      Begin Object Class=/Script/AudioEditor.SoundCueGraphNode_Root Name="SoundCueGraphNode_Root_0" ExportPath="/Script/AudioEditor.SoundCueGraphNode_Root'/Game/Music/03_The_Ruined_Temple_Cue.03_The_Ruined_Temple_Cue:SoundCueGraph_0.SoundCueGraphNode_Root_0'"
+      End Object
+   End Object
+   Begin Object Class=/Script/Engine.SoundNodeWavePlayer Name="SoundNodeWavePlayer_0" ExportPath="/Script/Engine.SoundNodeWavePlayer'/Game/Music/03_The_Ruined_Temple_Cue.03_The_Ruined_Temple_Cue:SoundNodeWavePlayer_0'"
+   End Object
+   Begin Object Name="SoundCueGraph_0" ExportPath="/Script/AudioEditor.SoundCueGraph'/Game/Music/03_The_Ruined_Temple_Cue.03_The_Ruined_Temple_Cue:SoundCueGraph_0'"
+      Begin Object Name="SoundCueGraphNode_0" ExportPath="/Script/AudioEditor.SoundCueGraphNode'/Game/Music/03_The_Ruined_Temple_Cue.03_The_Ruined_Temple_Cue:SoundCueGraph_0.SoundCueGraphNode_0'"
+         SoundNode="/Script/Engine.SoundNodeWavePlayer'03_The_Ruined_Temple_Cue:SoundNodeWavePlayer_0'"
+         NodePosX=-417
+         NodeGuid=172AFA9544E1DA08A335A4B888853D25
+         CustomProperties Pin (PinId=B3D449DB44DCD25129D5EA8950ED725B,PinName="Output",Direction="EGPD_Output",PinType.PinCategory="SoundNode",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(SoundCueGraphNode_Root_0 BB5264B741C6E3433D31E0BF40934CD0,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+      End Object
+      Begin Object Name="SoundCueGraphNode_Root_0" ExportPath="/Script/AudioEditor.SoundCueGraphNode_Root'/Game/Music/03_The_Ruined_Temple_Cue.03_The_Ruined_Temple_Cue:SoundCueGraph_0.SoundCueGraphNode_Root_0'"
+         NodePosY=-58
+         NodeGuid=DE670893451D3F842D0F2FB5FC678526
+         CustomProperties Pin (PinId=BB5264B741C6E3433D31E0BF40934CD0,PinType.PinCategory="SoundNode",PinType.PinSubCategory="Root",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(SoundCueGraphNode_0 B3D449DB44DCD25129D5EA8950ED725B,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+      End Object
+      Schema="/Script/CoreUObject.Class'/Script/AudioEditor.SoundCueGraphSchema'"
+      Nodes(0)="/Script/AudioEditor.SoundCueGraphNode_Root'SoundCueGraphNode_Root_0'"
+      Nodes(1)="/Script/AudioEditor.SoundCueGraphNode'SoundCueGraphNode_0'"
+      bAllowDeletion=False
+      GraphGuid=947E264F463F54D65BD702B1D6272AFD
+   End Object
+   Begin Object Name="SoundNodeWavePlayer_0" ExportPath="/Script/Engine.SoundNodeWavePlayer'/Game/Music/03_The_Ruined_Temple_Cue.03_The_Ruined_Temple_Cue:SoundNodeWavePlayer_0'"
+      SoundWaveAssetPtr="/Game/Music/03_The_Ruined_Temple.03_The_Ruined_Temple"
+      bLooping=True
+      GraphNode="/Script/AudioEditor.SoundCueGraphNode'03_The_Ruined_Temple_Cue:SoundCueGraph_0.SoundCueGraphNode_0'"
+   End Object
+   FirstNode="/Script/Engine.SoundNodeWavePlayer'SoundNodeWavePlayer_0'"
+   VolumeMultiplier=0.300000
+   AllNodes(0)="/Script/Engine.SoundNodeWavePlayer'SoundNodeWavePlayer_0'"
+   SoundCueGraph="/Script/AudioEditor.SoundCueGraph'SoundCueGraph_0'"
+   Duration=10000.000000
+   MaxDistance=2097152.000000
+End Object

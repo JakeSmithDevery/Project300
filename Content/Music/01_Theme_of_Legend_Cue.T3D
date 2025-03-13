@@ -1,0 +1,37 @@
+Begin Object Class=/Script/Engine.SoundCue Name="01_Theme_of_Legend_Cue" ExportPath="/Script/Engine.SoundCue'/Game/Music/01_Theme_of_Legend_Cue.01_Theme_of_Legend_Cue'"
+   Begin Object Class=/Script/Engine.SoundNodeWavePlayer Name="SoundNodeWavePlayer_0" ExportPath="/Script/Engine.SoundNodeWavePlayer'/Game/Music/01_Theme_of_Legend_Cue.01_Theme_of_Legend_Cue:SoundNodeWavePlayer_0'"
+   End Object
+   Begin Object Class=/Script/AudioEditor.SoundCueGraph Name="SoundCueGraph_0" ExportPath="/Script/AudioEditor.SoundCueGraph'/Game/Music/01_Theme_of_Legend_Cue.01_Theme_of_Legend_Cue:SoundCueGraph_0'"
+      Begin Object Class=/Script/AudioEditor.SoundCueGraphNode_Root Name="SoundCueGraphNode_Root_0" ExportPath="/Script/AudioEditor.SoundCueGraphNode_Root'/Game/Music/01_Theme_of_Legend_Cue.01_Theme_of_Legend_Cue:SoundCueGraph_0.SoundCueGraphNode_Root_0'"
+      End Object
+      Begin Object Class=/Script/AudioEditor.SoundCueGraphNode Name="SoundCueGraphNode_0" ExportPath="/Script/AudioEditor.SoundCueGraphNode'/Game/Music/01_Theme_of_Legend_Cue.01_Theme_of_Legend_Cue:SoundCueGraph_0.SoundCueGraphNode_0'"
+      End Object
+   End Object
+   Begin Object Name="SoundNodeWavePlayer_0" ExportPath="/Script/Engine.SoundNodeWavePlayer'/Game/Music/01_Theme_of_Legend_Cue.01_Theme_of_Legend_Cue:SoundNodeWavePlayer_0'"
+      SoundWaveAssetPtr="/Game/Music/01_Theme_of_Legend.01_Theme_of_Legend"
+      GraphNode="/Script/AudioEditor.SoundCueGraphNode'01_Theme_of_Legend_Cue:SoundCueGraph_0.SoundCueGraphNode_0'"
+   End Object
+   Begin Object Name="SoundCueGraph_0" ExportPath="/Script/AudioEditor.SoundCueGraph'/Game/Music/01_Theme_of_Legend_Cue.01_Theme_of_Legend_Cue:SoundCueGraph_0'"
+      Begin Object Name="SoundCueGraphNode_Root_0" ExportPath="/Script/AudioEditor.SoundCueGraphNode_Root'/Game/Music/01_Theme_of_Legend_Cue.01_Theme_of_Legend_Cue:SoundCueGraph_0.SoundCueGraphNode_Root_0'"
+         NodePosY=-58
+         NodeGuid=B79DACA84465A4F581E73E9C5ECE2453
+         CustomProperties Pin (PinId=8EB27C46483B4DE5F2CE49A1BC94163A,PinType.PinCategory="SoundNode",PinType.PinSubCategory="Root",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(SoundCueGraphNode_0 FF9209584D7648D04E7DEFACA8A261F7,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+      End Object
+      Begin Object Name="SoundCueGraphNode_0" ExportPath="/Script/AudioEditor.SoundCueGraphNode'/Game/Music/01_Theme_of_Legend_Cue.01_Theme_of_Legend_Cue:SoundCueGraph_0.SoundCueGraphNode_0'"
+         SoundNode="/Script/Engine.SoundNodeWavePlayer'01_Theme_of_Legend_Cue:SoundNodeWavePlayer_0'"
+         NodePosX=-406
+         NodeGuid=E9914B91495CDE054078EFBF4DAD3F11
+         CustomProperties Pin (PinId=FF9209584D7648D04E7DEFACA8A261F7,PinName="Output",Direction="EGPD_Output",PinType.PinCategory="SoundNode",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(SoundCueGraphNode_Root_0 8EB27C46483B4DE5F2CE49A1BC94163A,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+      End Object
+      Schema="/Script/CoreUObject.Class'/Script/AudioEditor.SoundCueGraphSchema'"
+      Nodes(0)="/Script/AudioEditor.SoundCueGraphNode_Root'SoundCueGraphNode_Root_0'"
+      Nodes(1)="/Script/AudioEditor.SoundCueGraphNode'SoundCueGraphNode_0'"
+      bAllowDeletion=False
+      GraphGuid=FE6C3FBB4180D60EC1D518BDEA4F1B1B
+   End Object
+   FirstNode="/Script/Engine.SoundNodeWavePlayer'SoundNodeWavePlayer_0'"
+   AllNodes(0)="/Script/Engine.SoundNodeWavePlayer'SoundNodeWavePlayer_0'"
+   SoundCueGraph="/Script/AudioEditor.SoundCueGraph'SoundCueGraph_0'"
+   Duration=48.023720
+   MaxDistance=2097152.000000
+End Object

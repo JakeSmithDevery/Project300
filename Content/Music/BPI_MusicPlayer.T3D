@@ -1,0 +1,85 @@
+Begin Object Class=/Script/Engine.Blueprint Name="BPI_MusicPlayer" ExportPath="/Script/Engine.Blueprint'/Game/Music/BPI_MusicPlayer.BPI_MusicPlayer'"
+   Begin Object Class=/Script/Engine.EdGraph Name="PlayMusic" ExportPath="/Script/Engine.EdGraph'/Game/Music/BPI_MusicPlayer.BPI_MusicPlayer:PlayMusic'"
+      Begin Object Class=/Script/BlueprintGraph.K2Node_FunctionEntry Name="K2Node_FunctionEntry_0" ExportPath="/Script/BlueprintGraph.K2Node_FunctionEntry'/Game/Music/BPI_MusicPlayer.BPI_MusicPlayer:PlayMusic.K2Node_FunctionEntry_0'"
+      End Object
+   End Object
+   Begin Object Class=/Script/Engine.EdGraph Name="StopMusic" ExportPath="/Script/Engine.EdGraph'/Game/Music/BPI_MusicPlayer.BPI_MusicPlayer:StopMusic'"
+      Begin Object Class=/Script/BlueprintGraph.K2Node_FunctionEntry Name="K2Node_FunctionEntry_0" ExportPath="/Script/BlueprintGraph.K2Node_FunctionEntry'/Game/Music/BPI_MusicPlayer.BPI_MusicPlayer:StopMusic.K2Node_FunctionEntry_0'"
+      End Object
+   End Object
+   Begin Object Class=/Script/Engine.EdGraph Name="PauseMusic" ExportPath="/Script/Engine.EdGraph'/Game/Music/BPI_MusicPlayer.BPI_MusicPlayer:PauseMusic'"
+      Begin Object Class=/Script/BlueprintGraph.K2Node_FunctionEntry Name="K2Node_FunctionEntry_0" ExportPath="/Script/BlueprintGraph.K2Node_FunctionEntry'/Game/Music/BPI_MusicPlayer.BPI_MusicPlayer:PauseMusic.K2Node_FunctionEntry_0'"
+      End Object
+   End Object
+   Begin Object Class=/Script/Engine.EdGraph Name="ResumeMusic" ExportPath="/Script/Engine.EdGraph'/Game/Music/BPI_MusicPlayer.BPI_MusicPlayer:ResumeMusic'"
+      Begin Object Class=/Script/BlueprintGraph.K2Node_FunctionEntry Name="K2Node_FunctionEntry_0" ExportPath="/Script/BlueprintGraph.K2Node_FunctionEntry'/Game/Music/BPI_MusicPlayer.BPI_MusicPlayer:ResumeMusic.K2Node_FunctionEntry_0'"
+      End Object
+   End Object
+   Begin Object Name="PlayMusic" ExportPath="/Script/Engine.EdGraph'/Game/Music/BPI_MusicPlayer.BPI_MusicPlayer:PlayMusic'"
+      Begin Object Name="K2Node_FunctionEntry_0" ExportPath="/Script/BlueprintGraph.K2Node_FunctionEntry'/Game/Music/BPI_MusicPlayer.BPI_MusicPlayer:PlayMusic.K2Node_FunctionEntry_0'"
+         ExtraFlags=201457664
+         FunctionReference=(MemberName="PlayMusic")
+         bIsEditable=True
+         NodeGuid=D9DC33A0484F41641ECBE79F15542B18
+         CustomProperties Pin (PinId=FFBD72884DAD60B51FFDF2AA8A370D85,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=1D1E152A426AED5C176AECAED4A8C36A,PinName="Music",Direction="EGPD_Output",PinType.PinCategory="object",PinType.PinSubCategory="",PinType.PinSubCategoryObject="/Script/CoreUObject.Class'/Script/Engine.SoundBase'",PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=7A1AC211499582674BE383AD88637B1D,PinName="FadeOutTimeOld",Direction="EGPD_Output",PinType.PinCategory="real",PinType.PinSubCategory="double",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=1E70748D41525BBA2AA7AE98889398E1,PinName="FadeInTimeNew",Direction="EGPD_Output",PinType.PinCategory="real",PinType.PinSubCategory="double",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties UserDefinedPin (PinName="Music",PinType=(PinCategory="object",PinSubCategoryObject="/Script/CoreUObject.Class'/Script/Engine.SoundBase'"),DesiredPinDirection=EGPD_Output)
+         CustomProperties UserDefinedPin (PinName="FadeOutTimeOld",PinType=(PinCategory="real",PinSubCategory="double"),DesiredPinDirection=EGPD_Output)
+         CustomProperties UserDefinedPin (PinName="FadeInTimeNew",PinType=(PinCategory="real",PinSubCategory="double"),DesiredPinDirection=EGPD_Output)
+      End Object
+      Schema="/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+      Nodes(0)="/Script/BlueprintGraph.K2Node_FunctionEntry'K2Node_FunctionEntry_0'"
+      GraphGuid=D649CFE5496CAEDD5719BFACA5C8AB37
+   End Object
+   Begin Object Name="StopMusic" ExportPath="/Script/Engine.EdGraph'/Game/Music/BPI_MusicPlayer.BPI_MusicPlayer:StopMusic'"
+      Begin Object Name="K2Node_FunctionEntry_0" ExportPath="/Script/BlueprintGraph.K2Node_FunctionEntry'/Game/Music/BPI_MusicPlayer.BPI_MusicPlayer:StopMusic.K2Node_FunctionEntry_0'"
+         ExtraFlags=201457664
+         FunctionReference=(MemberName="StopMusic")
+         bIsEditable=True
+         NodeGuid=F8C112CC460CD9E1B3CFB99BDA191545
+         CustomProperties Pin (PinId=A7EC4DB1476BB133343BD59D3644ECF2,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties Pin (PinId=88B6C62D43296DB9612F76A00F989EC5,PinName="FadeOutTime",Direction="EGPD_Output",PinType.PinCategory="real",PinType.PinSubCategory="double",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+         CustomProperties UserDefinedPin (PinName="FadeOutTime",PinType=(PinCategory="real",PinSubCategory="double"),DesiredPinDirection=EGPD_Output)
+      End Object
+      Schema="/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+      Nodes(0)="/Script/BlueprintGraph.K2Node_FunctionEntry'K2Node_FunctionEntry_0'"
+      GraphGuid=15CFF0854E2D954809D0C5826ED3C9BC
+   End Object
+   Begin Object Name="PauseMusic" ExportPath="/Script/Engine.EdGraph'/Game/Music/BPI_MusicPlayer.BPI_MusicPlayer:PauseMusic'"
+      Begin Object Name="K2Node_FunctionEntry_0" ExportPath="/Script/BlueprintGraph.K2Node_FunctionEntry'/Game/Music/BPI_MusicPlayer.BPI_MusicPlayer:PauseMusic.K2Node_FunctionEntry_0'"
+         ExtraFlags=201457664
+         FunctionReference=(MemberName="PauseMusic")
+         bIsEditable=True
+         NodeGuid=C4E64DCB40F8A6222ADE62BA31E3C66A
+         CustomProperties Pin (PinId=9723FCDA49E4B7D97704DEA4592354B5,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+      End Object
+      Schema="/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+      Nodes(0)="/Script/BlueprintGraph.K2Node_FunctionEntry'K2Node_FunctionEntry_0'"
+      GraphGuid=C2DAEFAC477DE3D70632EB98CBEADA30
+   End Object
+   Begin Object Name="ResumeMusic" ExportPath="/Script/Engine.EdGraph'/Game/Music/BPI_MusicPlayer.BPI_MusicPlayer:ResumeMusic'"
+      Begin Object Name="K2Node_FunctionEntry_0" ExportPath="/Script/BlueprintGraph.K2Node_FunctionEntry'/Game/Music/BPI_MusicPlayer.BPI_MusicPlayer:ResumeMusic.K2Node_FunctionEntry_0'"
+         ExtraFlags=201457664
+         FunctionReference=(MemberName="ResumeMusic")
+         bIsEditable=True
+         NodeGuid=5A528F214100A6CEC1DEF49BFE0BA218
+         CustomProperties Pin (PinId=7AACF293406DCB5181274AAF6460D9FF,PinName="then",Direction="EGPD_Output",PinType.PinCategory="exec",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+      End Object
+      Schema="/Script/CoreUObject.Class'/Script/BlueprintGraph.EdGraphSchema_K2'"
+      Nodes(0)="/Script/BlueprintGraph.K2Node_FunctionEntry'K2Node_FunctionEntry_0'"
+      GraphGuid=79E4FE354896A1C9D8F7C98F1EEA8DDF
+   End Object
+   ParentClass="/Script/CoreUObject.Class'/Script/CoreUObject.Interface'"
+   BlueprintType=BPTYPE_Interface
+   BlueprintSystemVersion=2
+   FunctionGraphs(0)="/Script/Engine.EdGraph'PlayMusic'"
+   FunctionGraphs(1)="/Script/Engine.EdGraph'StopMusic'"
+   FunctionGraphs(2)="/Script/Engine.EdGraph'PauseMusic'"
+   FunctionGraphs(3)="/Script/Engine.EdGraph'ResumeMusic'"
+   CategorySorting(0)=""
+   GeneratedClass="/Script/Engine.BlueprintGeneratedClass'BPI_MusicPlayer_C'"
+   bLegacyNeedToPurgeSkelRefs=False
+   BlueprintGuid=5A9AE7D64C8238F454296D94F9FF6199
+End Object

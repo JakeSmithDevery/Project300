@@ -1,0 +1,37 @@
+Begin Object Class=/Script/Engine.SoundCue Name="02_Story_of_a_Millennium_Ago_Cue" ExportPath="/Script/Engine.SoundCue'/Game/Music/02_Story_of_a_Millennium_Ago_Cue.02_Story_of_a_Millennium_Ago_Cue'"
+   Begin Object Class=/Script/Engine.SoundNodeWavePlayer Name="SoundNodeWavePlayer_0" ExportPath="/Script/Engine.SoundNodeWavePlayer'/Game/Music/02_Story_of_a_Millennium_Ago_Cue.02_Story_of_a_Millennium_Ago_Cue:SoundNodeWavePlayer_0'"
+   End Object
+   Begin Object Class=/Script/AudioEditor.SoundCueGraph Name="SoundCueGraph_0" ExportPath="/Script/AudioEditor.SoundCueGraph'/Game/Music/02_Story_of_a_Millennium_Ago_Cue.02_Story_of_a_Millennium_Ago_Cue:SoundCueGraph_0'"
+      Begin Object Class=/Script/AudioEditor.SoundCueGraphNode_Root Name="SoundCueGraphNode_Root_0" ExportPath="/Script/AudioEditor.SoundCueGraphNode_Root'/Game/Music/02_Story_of_a_Millennium_Ago_Cue.02_Story_of_a_Millennium_Ago_Cue:SoundCueGraph_0.SoundCueGraphNode_Root_0'"
+      End Object
+      Begin Object Class=/Script/AudioEditor.SoundCueGraphNode Name="SoundCueGraphNode_0" ExportPath="/Script/AudioEditor.SoundCueGraphNode'/Game/Music/02_Story_of_a_Millennium_Ago_Cue.02_Story_of_a_Millennium_Ago_Cue:SoundCueGraph_0.SoundCueGraphNode_0'"
+      End Object
+   End Object
+   Begin Object Name="SoundNodeWavePlayer_0" ExportPath="/Script/Engine.SoundNodeWavePlayer'/Game/Music/02_Story_of_a_Millennium_Ago_Cue.02_Story_of_a_Millennium_Ago_Cue:SoundNodeWavePlayer_0'"
+      SoundWaveAssetPtr="/Game/Music/02_Story_of_a_Millennium_Ago.02_Story_of_a_Millennium_Ago"
+      GraphNode="/Script/AudioEditor.SoundCueGraphNode'02_Story_of_a_Millennium_Ago_Cue:SoundCueGraph_0.SoundCueGraphNode_0'"
+   End Object
+   Begin Object Name="SoundCueGraph_0" ExportPath="/Script/AudioEditor.SoundCueGraph'/Game/Music/02_Story_of_a_Millennium_Ago_Cue.02_Story_of_a_Millennium_Ago_Cue:SoundCueGraph_0'"
+      Begin Object Name="SoundCueGraphNode_Root_0" ExportPath="/Script/AudioEditor.SoundCueGraphNode_Root'/Game/Music/02_Story_of_a_Millennium_Ago_Cue.02_Story_of_a_Millennium_Ago_Cue:SoundCueGraph_0.SoundCueGraphNode_Root_0'"
+         NodePosY=-58
+         NodeGuid=15CB62A64E883388F699518FCDA49F6B
+         CustomProperties Pin (PinId=9E3ED324464DB3EF0FD7B78BEC421802,PinType.PinCategory="SoundNode",PinType.PinSubCategory="Root",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(SoundCueGraphNode_0 D8550436460C49754AE9879E257F2508,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+      End Object
+      Begin Object Name="SoundCueGraphNode_0" ExportPath="/Script/AudioEditor.SoundCueGraphNode'/Game/Music/02_Story_of_a_Millennium_Ago_Cue.02_Story_of_a_Millennium_Ago_Cue:SoundCueGraph_0.SoundCueGraphNode_0'"
+         SoundNode="/Script/Engine.SoundNodeWavePlayer'02_Story_of_a_Millennium_Ago_Cue:SoundNodeWavePlayer_0'"
+         NodePosX=-458
+         NodeGuid=37016C374C08E9AAB5DA9A8F25DC25B1
+         CustomProperties Pin (PinId=D8550436460C49754AE9879E257F2508,PinName="Output",Direction="EGPD_Output",PinType.PinCategory="SoundNode",PinType.PinSubCategory="",PinType.PinSubCategoryObject=None,PinType.PinSubCategoryMemberReference=(),PinType.PinValueType=(),PinType.ContainerType=None,PinType.bIsReference=False,PinType.bIsConst=False,PinType.bIsWeakPointer=False,PinType.bIsUObjectWrapper=False,PinType.bSerializeAsSinglePrecisionFloat=False,LinkedTo=(SoundCueGraphNode_Root_0 9E3ED324464DB3EF0FD7B78BEC421802,),PersistentGuid=00000000000000000000000000000000,bHidden=False,bNotConnectable=False,bDefaultValueIsReadOnly=False,bDefaultValueIsIgnored=False,bAdvancedView=False,bOrphanedPin=False,)
+      End Object
+      Schema="/Script/CoreUObject.Class'/Script/AudioEditor.SoundCueGraphSchema'"
+      Nodes(0)="/Script/AudioEditor.SoundCueGraphNode_Root'SoundCueGraphNode_Root_0'"
+      Nodes(1)="/Script/AudioEditor.SoundCueGraphNode'SoundCueGraphNode_0'"
+      bAllowDeletion=False
+      GraphGuid=A47DFC4A4CEA92C5C9319CAA04E027FB
+   End Object
+   FirstNode="/Script/Engine.SoundNodeWavePlayer'SoundNodeWavePlayer_0'"
+   AllNodes(0)="/Script/Engine.SoundNodeWavePlayer'SoundNodeWavePlayer_0'"
+   SoundCueGraph="/Script/AudioEditor.SoundCueGraph'SoundCueGraph_0'"
+   Duration=38.957664
+   MaxDistance=2097152.000000
+End Object
