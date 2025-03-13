@@ -20,6 +20,8 @@ void UButtonCondition::Initialize(UObject* WorldContext)
 
 void UButtonCondition::TickCondition(float DeltaTime)
 {
+	Super::TickCondition(DeltaTime);
+
 	if (CharacterController->WasInputKeyJustPressed(RequiredKey))
 	{
 		CurrentPresses++;
