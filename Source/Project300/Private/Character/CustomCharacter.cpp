@@ -3,6 +3,7 @@
 
 #include "Character/CustomCharacter.h"
 #include "Kismet/KismetMathLibrary.h"
+#include <Interfaces/Interactable.h>
 
 // Sets default values
 ACustomCharacter::ACustomCharacter()
@@ -13,7 +14,7 @@ ACustomCharacter::ACustomCharacter()
 	isLockedOn = false;
 	targetHeightOffset = 20.0f;
 	lockedOnActor = nullptr;
-
+	InteractionDistance = 500;
 }
 
 // Called when the game starts or when spawned
@@ -58,6 +59,26 @@ void ACustomCharacter::ChangeLockOnTarget()
 
 	// Set the next locked on actor
 	lockedOnActor = lockOnCandidates[nextIndex];
+}
+
+void ACustomCharacter::TryToInteract(FVector start, FVector direction)
+{
+	FVector end = start + (direction * InteractionDistance);
+	FHitResult hitResult;
+	FCollisionQueryParams collisionParams;
+
+	if (GetWorld()->LineTraceSingleByChannel(hitResult, start, end, ECC_Visibility, collisionParams))
+	{
+		AActor* hitActor = hitResult.GetActor();
+
+		if (IsValid(hitActor))
+		{
+			if (hitActor->Implements<UInteractable>())
+			{
+				IInteractable::Execute_Interact(hitActor, this);
+			}
+		}
+	}
 }
 
 
