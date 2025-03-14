@@ -37,6 +37,7 @@ void UKillEnemyCondition::OnEnemyKilled(FString EnemyID, FString LocationID)
 
 	if (isCorrectEnemy && isCorrectLocation)
 	{
+		UE_LOG(LogTemp, Log, TEXT("Enemy killed"));
 		CurrentKillCount++;
 	}
 }

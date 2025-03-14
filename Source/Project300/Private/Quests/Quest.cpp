@@ -36,6 +36,7 @@ void UQuest::AdvanceToNextStep()
     if (CurrentStepIndex < StepInstances.Num() &&
         StepInstances[CurrentStepIndex]->AreAllConditionsMet())
     {
+        UE_LOG(LogTemp, Log, TEXT("Quest Step completed!"));
         CurrentStepIndex++;
     }
 }

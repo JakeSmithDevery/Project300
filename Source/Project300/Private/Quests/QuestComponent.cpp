@@ -47,16 +47,12 @@ void UQuestComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActor
 		{
 			UQuestStep* step = quest->StepInstances[quest->GetCurrentStepIndex()];
 
-			GEngine->AddOnScreenDebugMessage(1, 1.0f, FColor::Red, step->Description.ToString());
-
 			for (UQuestCondition* condition : step->ConditionInstances)
 			{
 				if (condition)
 				{
 					if (!condition->ConditionCompleted)
 					{
-						GEngine->AddOnScreenDebugMessage(-1, 0.0f, FColor::Green, condition->Description.ToString());
-
 						condition->TickCondition(DeltaTime);
 
 						if (condition->IsConditionMet())
@@ -99,7 +95,10 @@ void UQuestComponent::CheckQuestProgress(UQuest* Quest)
 		UE_LOG(LogTemp, Log, TEXT("Quest '%s' completed!"), *Quest->QuestName.ToString());
 
 		if (Quest->NextQuest != NULL)
+		{
+			ActiveQuests.Remove(Quest->GetPrimaryAssetId());
 			StartQuest(Quest->NextQuest);
+		}
 	}
 }
 
